@@ -1,0 +1,58 @@
+.l-footer {
+    height: 70vh !important;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 10px 10vh;
+    @include is-sp {
+        height: 100vh !important;
+        padding: 20px 20px;
+    }
+    &__text {
+        font: 18px $YuGo-Medium;
+        color: $white;
+        white-space: pre-line;
+        display: none;
+        @include is-sp {
+            display: block;
+            font-size:  14px;
+        }
+    }
+    &__link-container {
+        width: 290px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @include is-sp {
+            margin: 0 auto 0;
+        }
+        &--link {
+            width: 70px;
+            display: block;
+        }
+    }
+    &__terrace-logo {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    &__copyright-text {
+        font: 14px $YuGo-Medium;
+        color: $white;
+        text-align: center;
+        @include is-sp {
+            white-space: pre-line;
+            font-size: 12px;
+        }
+        &--link {
+            font: 14px $YuGo-Medium;
+            color: $white;
+            display: inline;
+            @include is-sp {
+                font-size: 12px;
+            }
+        }
+    }
+}

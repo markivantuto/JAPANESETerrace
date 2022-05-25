@@ -1,0 +1,194 @@
+// pc
+.c-reservation-btn {
+    height: 100px;
+    font: 40px $YuGo-Bold;
+    color: $white;
+    align-items: center;
+    background-color: $dark-brown;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    white-space: nowrap;
+    display: none;
+    width: 0;
+    .arrow {
+      display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;  /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+        align-items: center;
+        padding: 0 40px 0 25px;
+        &--img {
+            width: 50px !important;
+        }
+    }
+}
+
+// sp
+.c-reservation-btn-sp {
+  height: 13vh;
+  font: 32px $YuGo-Bold;
+  color: $white;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $dark-brown;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  white-space: nowrap;
+  display: none;
+  width: 0;
+  &--hamburger {
+    width: 267px;
+    background-color: $black;
+    display: block;
+    height: 13vh;
+    width: 100px;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    &--img {
+      width: 60px;
+    }
+  }
+  &--text-container {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    .arrow {
+      display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;  /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+      align-items: center;
+      padding: 0 25px 0 35px; 
+      &__mg {
+        width: 50px !important;
+      }
+    }
+  }
+}
+
+// pc
+.show-btn {
+  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  animation: animate-reservation-btn-show 0.1s 1 forwards;
+  @keyframes animate-reservation-btn-show {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 332px;
+    }
+  }
+  @include is-sp {
+    display: none !important;
+  }
+}
+.hide-btn {
+  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  animation: animate-reservation-btn-hide 0.1s 1 forwards;
+  @keyframes animate-reservation-btn-hide {
+    0% {
+      width: 332px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  @include is-sp {
+    display: none !important;
+  }
+}
+
+// sp
+.show-btn-sp {
+  display: none !important;
+  animation: animate-reservation-btn-sp-show 0.1s 1 forwards;
+  @keyframes animate-reservation-btn-sp-show {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @include is-sp {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex !important;
+  }
+}
+.hide-btn-sp {
+  display: none !important;
+  animation: animate-reservation-btn-sp-hide 0.1s 1 forwards;
+  @keyframes animate-reservation-btn-sp-hide {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  @include is-sp {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex !important;
+  }
+}
+
+
+.menu-reservation-btn {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: $red;
+  @include is-sp {
+    height: 13vh;
+  }
+  &__left-arrow {
+      display: block;
+      @include is-sp {
+        display: none;
+      }
+      &--img {
+          width: 50px;
+      }
+  }
+  &__right-arrow {
+      display: none;
+      @include is-sp {
+        display: block;
+      }
+      &--img {
+          width: 50px;
+      }
+  }
+  &__text {
+      display: block;
+      font: 40px $YuGo-Bold;
+      color: $white;
+      white-space: nowrap;
+      padding: 0 9.21%;
+      ;
+  }
+}

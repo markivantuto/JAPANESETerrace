@@ -1,0 +1,390 @@
+.p-scroll-line {
+    width: 1px;
+    height: 240px;
+    background-color: $white;
+    animation: animate-line 1.5s cubic-bezier(1,0,0,1) infinite;;
+    transform: rotate(-180deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @keyframes animate-line {
+        0% {
+        height: 240px;
+        }
+        100% {
+        height: 0;
+        }
+      }
+}
+
+
+.line-top {
+    &__01 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+    }
+
+    &__02 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: right;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:.3s;
+    }
+
+    &__03 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:0.4s;
+    }
+
+    &__04 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: left;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:0.5s;
+    }
+
+    &__05 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: top;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.6s;
+    }
+}
+
+.line-bottom {
+    &__01 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: top;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.7s;
+    }
+
+    &__02 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: left;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:.8s;
+    }
+
+    &__03 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:.9s;
+    }
+
+    &__04 {
+        animation-name: second;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: right;
+        transform-box: fill-box;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-delay:1s;
+    }
+
+    &__05 {
+        animation-name: first;
+        animation-duration: 0.2s;
+        animation-timing-function: cubic-bezier(.54,0,.29,1);
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-delay:1.2s;
+    }
+}
+
+
+.sauna{
+    animation:appear 1s linear both;
+    animation-delay:1.3s;
+    opacity:0;
+}
+.rooftop{
+    animation:appear 1s linear both;
+    animation-delay:1.3s;
+    opacity:0;
+}
+.logo{
+    animation:appear 1s linear both;
+    animation-delay:1.4s;
+    opacity:0;
+}
+
+.story-above {
+    stroke-dasharray: 604 606;
+    stroke-dashoffset: 605;
+    animation: story-above-draw 2500ms ease 0ms forwards;
+}
+
+.story-below {
+    stroke-dasharray: 606 608;
+    stroke-dashoffset: 607;
+    animation: story-below-draw 2500ms ease 0ms forwards;
+}
+
+.header-white{
+    stroke-dasharray: 604 606;
+    stroke-dashoffset: 605;
+    animation: header-white-draw 2500ms ease 0ms forwards;
+}
+
+@keyframes header-white-draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes story-above-draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes story-below-draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes first {
+    0% {
+        transform: scaleY(0);
+    }
+
+    20% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes second {
+    0% {
+        transform: scaleX(0);
+    }
+
+    20% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes spFollow-in{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes spFollow-out{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes followThrough-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes followThrough-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes line-width {
+    0% {
+        transform: scaleX(0);
+    }
+
+    15% {
+        transform: scaleX(0);
+    }
+
+    40% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* top inViewport */
+[data-inviewport="story-line-top"] {
+    position: relative;
+    width: 50%;
+    left: 50%;
+}
+
+[data-inviewport="story-line-top"] path { 
+    transition: 3s;
+    fill: transparent;
+    stroke-width: 1;
+    stroke: $dark-brown;
+
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+}
+[data-inviewport="story-line-top"].is-inViewport path { 
+   stroke-dashoffset: 0;
+ }
+
+@include is-sp {
+    [data-inviewport="story-line-top"] {
+        display: none;
+    }
+}
+
+/* bottom inViewport */
+[data-inviewport="story-line-bottom"] {
+    position: relative;
+    width: 50%;
+    left: 0;
+}
+
+[data-inviewport="story-line-bottom"] path { 
+    transition: 3s;
+    fill: transparent;
+    stroke-width: 1;
+    stroke: $dark-brown;
+
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+}
+[data-inviewport="story-line-bottom"].is-inViewport path { 
+   stroke-dashoffset: 0;
+ }
+
+ @include is-sp {
+    [data-inviewport="story-line-bottom"] {
+        display: none;
+    }
+}
+
+ /* sp top inViewport */
+[data-inviewport="story-line-top-sp"] {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    display: none;
+}
+
+[data-inviewport="story-line-top-sp"] path { 
+    transition: 3s;
+    fill: transparent;
+    stroke-width: 1;
+    stroke: $dark-brown;
+
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+}
+[data-inviewport="story-line-top-sp"].is-inViewport path { 
+   stroke-dashoffset: 0;
+ }
+
+ .story-line-top-sp--svg {
+     width: 100%;
+ }
+
+@include is-sp {
+    [data-inviewport="story-line-top-sp"] {
+        display: block;
+    }
+}
+
+/* sp bottom inViewport */
+[data-inviewport="story-line-bottom-sp"] {
+    position: relative;
+    width: 50%;
+    left: 0;
+    display: none;
+}
+
+[data-inviewport="story-line-bottom-sp"] path { 
+    transition: 3s;
+    fill: transparent;
+    stroke-width: 1;
+    stroke: $dark-brown;
+
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+}
+[data-inviewport="story-line-bottom-sp"].is-inViewport path { 
+   stroke-dashoffset: 0;
+ }
+@include is-sp {
+    [data-inviewport="story-line-bottom-sp"] {
+        display: block;
+    }
+}
+.story-line-bottom-sp--svg {
+    width: 100%;
+}
+

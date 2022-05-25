@@ -1,0 +1,27 @@
+.u-font-18 {
+    font: 18px $YuGo-Medium;
+    @include is-sp {
+        font-size: 14px;
+    }
+}
+.u-font-20 {
+    font: 20px $YuGo-Medium;
+    @include is-sp {
+        font-size: 16px;
+    }
+}
+.u-font-28 {
+    font: 28px $YuGo-Medium;
+    @include is-sp {
+        font-size: 22px;
+    }
+}
+.u-font-red {
+    color: $red;
+}
+.u-font-black {
+    color: $black
+}
+.u-font-nowrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,21 @@
+.l-header {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: space-between;
+    &__text {
+        font: 18px $YuGo-Medium;
+        color: $white;
+        white-space: pre-line;
+        @include is-sp {
+            font-size: 14px;
+        }
+    }
+}
+
+
+// end of l-header
